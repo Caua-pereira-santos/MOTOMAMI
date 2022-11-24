@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using MOTOMAMI.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<MOTOMAMIContext>(
+    options => options.UseMySQL("server=localhost;database=estudante;user=root;password=luismiguel123")
+);
 
 var app = builder.Build();
 

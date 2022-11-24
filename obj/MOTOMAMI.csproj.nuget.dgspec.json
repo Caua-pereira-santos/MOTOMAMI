@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\salda\\OneDrive - ifsp.edu.br\\Área de Trabalho\\MOTOMAMI\\MOTOMAMI\\MOTOMAMI.csproj": {}
+    "C:\\Users\\salda\\OneDrive - ifsp.edu.br\\Área de Trabalho\\MOTOMAMI\\MOTOMAMI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\salda\\OneDrive - ifsp.edu.br\\Área de Trabalho\\MOTOMAMI\\MOTOMAMI\\MOTOMAMI.csproj": {
+    "C:\\Users\\salda\\OneDrive - ifsp.edu.br\\Área de Trabalho\\MOTOMAMI\\MOTOMAMI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\salda\\OneDrive - ifsp.edu.br\\Área de Trabalho\\MOTOMAMI\\MOTOMAMI\\MOTOMAMI.csproj",
+        "projectUniqueName": "C:\\Users\\salda\\OneDrive - ifsp.edu.br\\Área de Trabalho\\MOTOMAMI\\MOTOMAMI.csproj",
         "projectName": "MOTOMAMI",
-        "projectPath": "C:\\Users\\salda\\OneDrive - ifsp.edu.br\\Área de Trabalho\\MOTOMAMI\\MOTOMAMI\\MOTOMAMI.csproj",
+        "projectPath": "C:\\Users\\salda\\OneDrive - ifsp.edu.br\\Área de Trabalho\\MOTOMAMI\\MOTOMAMI.csproj",
         "packagesPath": "C:\\Users\\salda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\salda\\OneDrive - ifsp.edu.br\\Área de Trabalho\\MOTOMAMI\\MOTOMAMI\\obj\\",
+        "outputPath": "C:\\Users\\salda\\OneDrive - ifsp.edu.br\\Área de Trabalho\\MOTOMAMI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\salda\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "MySql.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
