@@ -34,5 +34,65 @@ public class MusicaController : Controller
         _context.SaveChanges();
         return RedirectToAction("Index");
     }
+
+    public IActionResult Detalhes(int id)
+    {
+        Musica musica = _context.Musicas.Find(id);
+
+        if(musica == null)
+        {
+            return NotFound();
+        }
+
+        return View(musica);
+    }
+
+    public IActionResult Editar(int id){
+        Musica musica = _context.Musicas.Find(id);
+
+        if(musica == null)
+        {
+            return NotFound();
+        }
+
+        return View(musica);
+    }
+    public IActionResult Atualizar([FromForm] Musica musica){
+        if (!ModelState.IsValid)
+        {
+            return View(musica);
+        }
+
+    Musica? musicaEncontrada = _context.Musicas.Find(musica.Id);
+
+        if(musicaEncontrada == null)
+        {
+            return NotFound();
+        }
+        
+        musicaEncontrada.Id = musica.Id;
+        musicaEncontrada.Nome = musica.Nome;
+        musicaEncontrada.Duracao = musica.Duracao;
+
+        _context.Musicas.Update(musicaEncontrada);
+        _context.SaveChanges();
+        return RedirectToAction("Index");
+
+    }
+
+    public IActionResult Deletar(int id)
+    {
+        Musica musica = _context.Musicas.Find(id);
+
+        if(musica == null)
+        {
+            return NotFound();
+        }
+         _context.Musicas.Remove(musica);
+        _context.SaveChanges();
+
+        return View();
+        
+    }
 }
 

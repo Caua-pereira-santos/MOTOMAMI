@@ -31,15 +31,15 @@
                     <td>@musica.Duracao</td>
                     <td>
                         
-                        <a asp-controller="" asp-action="" asp-route-id="">
+                        <a asp-controller="Musica" asp-action="Detalhes" asp-route-id="@musica.Id">
                             Ver detalhes
                          </a><br/><br/>
 
-                         <a asp-controller="" asp-action="" asp-route-id="">
+                         <a asp-controller="Musica" asp-action="Editar" asp-route-id="@musica.Id">
                             Editar
                          </a><br/><br/>
                         
-                        <a asp-controller="" asp-action="" asp-route-id="">
+                        <a asp-controller="Musica" asp-action="Deletar" asp-route-id="@musica.Id">
                             Deletar
                          </a>
 

@@ -1,0 +1,26 @@
+@model MOTOMAMI.Models.Musica
+
+@{
+    ViewData["Title"] = $"Música: {Model.Nome}";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div>
+
+<form asp-controller="Musica" asp-action="Atualizar" method="post">
+    
+    <input type="hidden" asp-for="@Model.Id">
+
+    <label for="Nome">Nome</label> <br/>
+    <input asp-for="@Model.Nome" value="@Model.Nome"> <br/><br/>
+     <!--<span asp-validation-for="Nome" class="text-danger"></span> <br/>-->
+
+    <label for="Duracao">Duração(min)</label> <br/>
+    <input asp-for="@Model.Duracao" value="@Model.Duracao" min="1"> <br/><br/>
+    <!--<span asp-validation-for="Duracao" class="text-danger"></span><br/>-->
+
+    <button class="btn btn-primary btn-sm" type="submit">Enviar</button>
+
+</form>
+
+</div>
