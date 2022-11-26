@@ -9,6 +9,7 @@ public class MOTOMAMIContext : DbContext
     public DbSet<Album> Albuns { get; set; }
 
     public DbSet<Gravadora> Gravadoras  {get; set; }
+    
     public MOTOMAMIContext(DbContextOptions<MOTOMAMIContext> options) : base(options)
     {}
 }

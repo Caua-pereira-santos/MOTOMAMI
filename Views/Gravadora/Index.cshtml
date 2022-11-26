@@ -1,0 +1,51 @@
+@model IEnumerable<MOTOMAMI.Models.Gravadora>
+
+@{
+    ViewData["Title"] = "Gravadoras";
+}
+<h1>@ViewData["Title"]</h1><br/>
+
+<a asp-controller="Gravadora" asp-action="Cadastro">
+    Cadastrar Gravadora
+</a><br/><br/>
+
+@if(Model.Count() == 0)
+{
+    <p>Nenhuma gravadora cadastrada</p>
+}else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Gênero de música</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var gravadora in Model)
+            {
+                <tr>
+                    <td>@gravadora.Id</td>
+                    <td>@gravadora.Nome</td>
+                    <td>@gravadora.Genero</td>
+                    <td>
+                        
+                        <a asp-controller="Gravadora" asp-action="Detalhes" asp-route-id="@gravadora.Id">
+                            Ver detalhes
+                         </a><br/><br/>
+
+                         <a asp-controller="Gravadora" asp-action="Editar" asp-route-id="@gravadora.Id">
+                            Editar
+                         </a><br/><br/>
+                        
+                        <a asp-controller="Gravadora" asp-action="Deletar" asp-route-id="@gravadora.Id">
+                            Deletar
+                         </a>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+ }

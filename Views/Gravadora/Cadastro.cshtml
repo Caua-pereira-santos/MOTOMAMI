@@ -1,0 +1,24 @@
+@model MOTOMAMI.Models.Gravadora
+
+@{
+    ViewData["Title"] = "Cadastrar gravadora";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    
+    <form asp-controller="Gravadora" asp-action="Salvar" method="post">
+        <label for="id">Id: </label>
+            <input type="number" name="id" id="id" class="form-control" min="1" required>
+
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome" class="form-control" required>
+
+        <label for="genero">Gênero Musical: </label>
+        <input type="text" name="genero" id="genero" class="form-control" required>
+
+        <br/><button type="submit">Salvar</button>
+    </form>
+    
+</div>

@@ -59,6 +59,29 @@ public class GravadoraController : Controller
 
    }
 
+   public IActionResult Atualizar([FromForm] Gravadora gravadora){
+        if (!ModelState.IsValid)
+        {
+            return View(gravadora);
+        }
+
+    Gravadora? gravadoraEncontrada = _context.Gravadoras.Find(gravadora.Id);
+
+        if(gravadoraEncontrada == null)
+        {
+            return NotFound();
+        }
+        
+        gravadoraEncontrada.Id = gravadora.Id;
+        gravadoraEncontrada.Nome = gravadora.Nome;
+        gravadoraEncontrada.Genero = gravadora.Genero;
+
+        _context.Gravadoras.Update(gravadoraEncontrada);
+        _context.SaveChanges();
+        return RedirectToAction("Index");
+
+    }
+
    public IActionResult Deletar(int id)
    {
     

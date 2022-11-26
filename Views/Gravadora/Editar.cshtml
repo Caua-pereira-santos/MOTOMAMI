@@ -1,0 +1,26 @@
+@model MOTOMAMI.Models.Gravadora
+
+@{
+    ViewData["Title"] = $"Gravadora: {Model.Nome}";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div>
+
+<form asp-controller="Gravadora" asp-action="Atualizar" method="post">
+    
+    <input type="hidden" asp-for="@Model.Id">
+
+    <label for="Nome">Nome</label> <br/>
+    <input asp-for="@Model.Nome" value="@Model.Nome"> <br/><br/>
+     <!--<span asp-validation-for="Nome" class="text-danger"></span> <br/>-->
+
+    <label for="Genero">Gênero Musical</label> <br/>
+    <input asp-for="@Model.Genero" value="@Model.Genero"> <br/><br/>
+    <!--<span asp-validation-for="Duracao" class="text-danger"></span><br/>-->
+
+    <button class="btn btn-primary btn-sm" type="submit">Enviar</button>
+
+</form>
+
+</div>
