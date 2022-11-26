@@ -3,18 +3,18 @@ using MOTOMAMI.Models;
 
 namespace MOTOMAMI.Controllers;
 
-public class GeneroController : Controller
+public class GravadoraController : Controller
 {
-    private readonly MOTOMAMIContext_context;
+    private readonly MOTOMAMIContext _context;
 
-    public GeneroController(MOTOMAMIContext context)
+    public GravadoraController(MOTOMAMIContext context)
     {
         _context = context;
     }
 
     public IActionResult Index()
     {
-        return View(_context.Genero);
+        return View(_context.Gravadoras);
     }
 
     public IActionResult Cadastro()
@@ -22,54 +22,54 @@ public class GeneroController : Controller
         return View();
     }
 
-    public IActionResult Salvar([FromForm] Genero genero)
+    public IActionResult Salvar([FromForm] Gravadora gravadora)
     {
         if(!ModelState.IsValid)
         {
-            return View(Genero);
+            return View(gravadora);
         }
 
-        _context.Genero.Add(Generos)
+        _context.Gravadoras.Add(gravadora);
         _context.SaveChanges();
         return RedirectToAction("Index");
     }
 
     public IActionResult Detalhes(int id)
     {
-        Genero genero = _context.Genero.Find(id);
+        Gravadora gravadora = _context.Gravadoras.Find(id);
 
-        if(genero == null)
+        if(gravadora == null)
         {
             return NotFound();
         }
 
-        return View (genero);
+        return View (gravadora);
     }
 
    public IActionResult Editar(int id)
    {
-    Genero genero = _context.Genero.Find(id);
+    Gravadora gravadora = _context.Gravadoras.Find(id);
 
-    if(genero == null)
+    if(gravadora == null)
     {
         return NotFound();
     }
 
-    return View (genero);
+    return View (gravadora);
 
    }
 
    public IActionResult Deletar(int id)
    {
     
-    Genero genero = _context.Genero.Find(id);
+    Gravadora gravadora = _context.Gravadoras.Find(id);
 
-    if(genero == null)
+    if(gravadora == null)
     {
         return NotFound();
     }
 
-    _context.Genero.Remove(genero);
+    _context.Gravadoras.Remove(gravadora);
     _context.SaveChanges();
 
     return View();

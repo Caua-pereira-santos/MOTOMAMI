@@ -1,0 +1,26 @@
+@model MOTOMAMI.Models.Album
+
+@{
+    ViewData["Title"] = $"Álbum: {Model.Nome}";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div>
+
+<form asp-controller="Album" asp-action="Atualizar" method="post">
+    
+    <input type="hidden" asp-for="@Model.Id">
+
+    <label for="Nome">Nome</label> <br/>
+    <input asp-for="@Model.Nome" value="@Model.Nome"> <br/><br/>
+     <!--<span asp-validation-for="Nome" class="text-danger"></span> <br/>-->
+
+    <label for="qtdeMusicas">Quantidade de Músicas</label> <br/>
+    <input asp-for="@Model.QtdeMusicas" value="@Model.QtdeMusicas" min="1"> <br/><br/>
+    <!--<span asp-validation-for="Duracao" class="text-danger"></span><br/>-->
+
+    <button class="btn btn-primary btn-sm" type="submit">Enviar</button>
+
+</form>
+
+</div>

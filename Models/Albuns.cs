@@ -1,18 +1,18 @@
 namespace MOTOMAMI.Models;
 
-public class Albuns
+public class Album
 {
      public int Id { get; set; }
      public string Nome{get; set;}
-     public int Qtde {get; set;}
+     public int QtdeMusicas {get; set;}
 
-     public Albuns(){}
+     public Album(){}
 
-     public Albuns(int id, string nome, int qtde)
+     public Album(int id, string nome, int qtdeMusicas)
      {
         Id = id;
         Nome = nome;
-        Qtde = qtde;
+        QtdeMusicas = qtdeMusicas;
      }
 
 }

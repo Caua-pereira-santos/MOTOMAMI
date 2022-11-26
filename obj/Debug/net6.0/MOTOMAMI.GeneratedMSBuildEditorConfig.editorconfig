@@ -15,6 +15,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\salda\OneDrive - ifsp.edu.br\Área de Trabalho\MOTOMAMI
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/salda/OneDrive - ifsp.edu.br/Área de Trabalho/MOTOMAMI/Views/Album/Cadastro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1cQ2FkYXN0cm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salda/OneDrive - ifsp.edu.br/Área de Trabalho/MOTOMAMI/Views/Album/Deletar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1cRGVsZXRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salda/OneDrive - ifsp.edu.br/Área de Trabalho/MOTOMAMI/Views/Album/Detalhes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1cRGV0YWxoZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salda/OneDrive - ifsp.edu.br/Área de Trabalho/MOTOMAMI/Views/Album/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1cRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/salda/OneDrive - ifsp.edu.br/Área de Trabalho/MOTOMAMI/Views/Album/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/salda/OneDrive - ifsp.edu.br/Área de Trabalho/MOTOMAMI/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
