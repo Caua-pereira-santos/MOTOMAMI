@@ -12,11 +12,11 @@
     <input type="hidden" asp-for="@Model.Id">
 
     <label for="Nome">Nome</label> <br/>
-    <input asp-for="@Model.Nome" value="@Model.Nome"> <br/><br/>
+    <input asp-for="@Model.Nome" value="@Model.Nome" class="form-control"> <br/><br/>
      <!--<span asp-validation-for="Nome" class="text-danger"></span> <br/>-->
 
     <label for="Duracao">Duração(min)</label> <br/>
-    <input asp-for="@Model.Duracao" value="@Model.Duracao" min="1"> <br/><br/>
+    <input asp-for="@Model.Duracao" value="@Model.Duracao" class="form-control" min="1"> <br/><br/>
     <!--<span asp-validation-for="Duracao" class="text-danger"></span><br/>-->
 
     <button class="btn btn-primary btn-sm" type="submit">Enviar</button>

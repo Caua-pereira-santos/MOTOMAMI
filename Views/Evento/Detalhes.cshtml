@@ -1,0 +1,16 @@
+@model MOTOMAMI.Models.Evento
+
+@{
+    ViewData["Title"] = $"Evento: {Model.Nome}";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <b>Id:</b> @Model.Id
+</p>
+<p>
+    <b>Nome:</b> @Model.Nome
+</p>
+<p>
+    <b>Lugar:</b> @Model.Lugar
+</p>

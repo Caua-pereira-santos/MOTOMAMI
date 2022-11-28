@@ -36,7 +36,9 @@ public class EventoController : Controller
 
     public IActionResult Detalhes(int id)
     {
-        if(album == null)
+        Evento evento = _context.Eventos.Find(id);
+
+        if(evento == null)
         {
             return NotFound();
         }
@@ -75,7 +77,7 @@ public class EventoController : Controller
         eventoEncontrado.Nome = evento.Nome;
         eventoEncontrado.Lugar = evento.Lugar;
 
-        _context.Eventos.Update(albumEncontrado);
+        _context.Eventos.Update(eventoEncontrado);
         _context.SaveChanges();
         return RedirectToAction("Index");
     }
@@ -84,7 +86,7 @@ public class EventoController : Controller
     {
         Evento evento = _context.Eventos.Find(id);
 
-        if(album == null)
+        if(evento == null)
         {
             return NotFound();
         }
