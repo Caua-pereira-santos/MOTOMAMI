@@ -14,6 +14,8 @@ public class MOTOMAMIContext : DbContext
     
     public DbSet<Instrumento> Instrumentos { get; set; } 
 
+    public DbSet<Ouvinte> Ouvintes { get; set; }
+
 
     public MOTOMAMIContext(DbContextOptions<MOTOMAMIContext> options) : base(options)
     {}

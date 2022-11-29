@@ -1,0 +1,16 @@
+@model MOTOMAMI.Models.Ouvinte
+
+@{
+    ViewData["Title"] = $"Ouvinte: {Model.Nome}";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <b>Id:</b> @Model.Id
+</p>
+<p>
+    <b>Nome:</b> @Model.Nome
+</p>
+<p>
+    <b>Música Preferida:</b> @Model.Preferencia
+</p>
